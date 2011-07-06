@@ -8,7 +8,7 @@ Attachment:
       type:       string(255)
     type: 
       type:       enum
-      values:     [image, video, audio, document, application, link, model, custom, other]
+      values:     [image, plan, video, audio, document, application, link, model, custom, other]
       default:    other
     object_id:
       type:         integer
@@ -21,7 +21,14 @@ ImageAttachment:
     type: column_aggregation
     keyField: type
     keyValue: image      
-    
+
+PlanAttachment:
+  inheritance:
+    extends: Attachment
+    type: column_aggregation
+    keyField: type
+    keyValue: plan      
+
 VideoAttachment:
   inheritance:
     extends: Attachment
