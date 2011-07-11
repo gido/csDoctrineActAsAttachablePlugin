@@ -9,7 +9,7 @@
  */
 abstract class PluginPlanAttachmentForm extends AttachmentForm
 {
-  public function setUp()i {
+  public function setUp() {
     $this->getObject()->setType('plan');
     $this->prepare(array('mimetypes' => array(
         'image/jpeg',
